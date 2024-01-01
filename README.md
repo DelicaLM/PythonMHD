@@ -6,3 +6,5 @@ for astrophysics.
 
 Please see the PythonMHD user guide for details on installation, setup, and the 
 algorithms that PythonMHD uses to accurately model astrophysical gas systems.
+
+Note: A high-speed verison of PythonMHD will be posted on this repository in the next few months.
