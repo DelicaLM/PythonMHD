@@ -177,15 +177,15 @@ class SimVisualizer:
                 self.figures[figNum][numRowsString] = figPar[numRowsString]
                 #Calculate the number of columns that we need to accommodate all data plots
                 #with the requested number of rows
-                self.figures[figNum][numColsString] = np.ceil(self.figures[figNum][numPlotsString]
-                                                              /self.figures[figNum][numRowsString])
+                self.figures[figNum][numColsString] = int(np.ceil(self.figures[figNum][numPlotsString]
+                                                              /self.figures[figNum][numRowsString]))
             elif numColsString in figPar.keys():
                 #If the user has only provided the number of columns, we need to calculate a suitable number of rows
                 self.figures[figNum][numColsString] = figPar[numColsString]
                 #Calculate the number of columns that we need to accommodate all data plots
                 #with the requested number of rows
-                self.figures[figNum][numRowsString] = np.ceil(self.figures[figNum][numPlotsString]
-                                                              / self.figures[figNum][numColsString])
+                self.figures[figNum][numRowsString] = int(np.ceil(self.figures[figNum][numPlotsString]
+                                                              / self.figures[figNum][numColsString]))
             else: #if the user has provided neither a number of rows nor a number of columns
                 #Choose a number of rows that makes sense for the number of data plots
                 if self.figures[figNum][numPlotsString] <= 2:
@@ -197,8 +197,8 @@ class SimVisualizer:
                 else: #shouldn't ever get here, unless the user overrides the default max number of plots per figure
                     self.figures[figNum][numRowsString] = 4
             #Calculate the number of columns that we need to accommodate all data plots with the derived number of rows
-            self.figures[figNum][numColsString] = np.ceil(self.figures[figNum][numPlotsString]
-                                                          /self.figures[figNum][numRowsString])
+            self.figures[figNum][numColsString] = int(np.ceil(self.figures[figNum][numPlotsString]
+                                                          /self.figures[figNum][numRowsString]))
             #Iterate over the plots that the user wants to display in the figure
             for plotNum in range(self.figures[figNum][numPlotsString]):
                 #Get the parameters for the current plot
