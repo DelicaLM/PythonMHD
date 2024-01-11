@@ -881,7 +881,7 @@ class SimVisualizer:
         #colorbar = self.fig.colorbar(img,cax=colorbarAxis)
         colorbar = figure.colorbar(img,cax=colorbarAxis)
         colorbar.set_alpha(1)
-        colorbar.draw_all()
+        colorbar._draw_all()
         self.figures[figNum][constants.COLORBARS][plotNum] = colorbar
 
     #Function: __getXAxisSlice_2D
