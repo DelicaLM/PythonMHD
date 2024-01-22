@@ -128,7 +128,7 @@ blastPar = {
 #Purpose: Creates the primitive variable matrix for the 3D hydro blast,
 #         using the parameters in gridPar and blastPar.
 #Input Parameters: gridPar (the grid parameters structure)
-#                  blastPar (the Sod Shock Tube parameters structure)
+#                  blastPar (the 3D Hydro Blast parameters structure)
 #Outputs: primVars (the primitive variable matrix that has been
 #                   constructed based on the specifications in
 #                   gridPar and blastPar)
